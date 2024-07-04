@@ -48,7 +48,7 @@ const EventPopup = ({ event, onClose }) => (
     <PopupContent>
       <button onClick={onClose}>×</button>
       <img
-        src={event.attributes.eventImage.data.attributes.formats.thumbnail.url}
+        src={event.attributes.eventImage.data[0].attributes.formats.thumbnail.url}
         alt={event.attributes.name}
       />
       <h3>{event.attributes.name}</h3>

@@ -66,11 +66,11 @@ const LoadMoreButton = styled.button`
 const EventGallery = () => {
   const dispatch = useDispatch();
   const events = useSelector((state) => {
-    return state.events;
+    return state.events.events;
   });
 
   useEffect(() => {
-    dispatch(() => fetchEvents());
+    dispatch(fetchEvents());
   }, [dispatch]);
 
   const [currentCategory, setCurrentCategory] = useState("All");
